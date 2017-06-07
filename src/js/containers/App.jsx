@@ -5,28 +5,37 @@ import {inject, observer} from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
 import {Route} from 'react-router-dom';
-import Home from './Home';
 
-const App = ({name}) => (
+import FacebookLogin from '../lib/facebookLogin';
 
-  <section>
+const App = ({name}) => {
 
-    {process.env.NODE_ENV !== `production` ? <DevTools/> : null}
+  const responseFacebook = response => {
+    console.log(response);
+  };
 
-    <header>
-      <h1>Hello, {name}</h1>
-    </header>
-
+  return (
     <section>
-      <Route
-        exact path='/'
-        component={Home}
-      />
+
+      {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+
+      <header>
+        <h1>Hello, {name}</h1>
+      </header>
+
+      <section>
+        <Route
+          exact path='/'
+        />
+        <FacebookLogin
+            appId='711579455681352'
+            callback={responseFacebook}
+          />
+      </section>
+
     </section>
-
-  </section>
-
-);
+  );
+};
 
 App.propTypes = {
   name: string.isRequired

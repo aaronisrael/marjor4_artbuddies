@@ -1,50 +1,55 @@
-import React from 'react';
-import {string} from 'prop-types';
-
-import {inject, observer} from 'mobx-react';
+import React, {Component} from 'react';
 import DevTools from 'mobx-react-devtools';
 
-import {Route} from 'react-router-dom';
+import {observer, inject} from 'mobx-react';
+import {number, string} from 'prop-types';
 
-import FacebookLogin from '../lib/facebookLogin';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-const App = ({name}) => {
+import ListView from '../components/ListView';
+import FacebookConnect from './FacebookConnect';
 
-  const responseFacebook = response => {
-    console.log(response);
-  };
+class App extends Component {
+  constructor(props, context, userId, token) {
+    super(props, context, userId, token);
+    this.state = {
+      userId, token
+    };
+  }
 
-  return (
-    <section>
+  requireAuth(token) {
+    console.log(token);
+  }
 
-      {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-
-      <header>
-        <h1>Hello, {name}</h1>
-      </header>
-
+  render(token) {
+    return (
       <section>
-        <Route
-          exact path='/'
-        />
-        <FacebookLogin
-            appId='711579455681352'
-            callback={responseFacebook}
-          />
-      </section>
 
-    </section>
-  );
-};
+        {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+
+        <Router>
+          <Switch>
+            <Route exact path='/' component={FacebookConnect} />
+            <Route exact path='/ListView' component={ListView} onEnter={this.requireAuth(token)} />
+          </Switch>
+        </Router>
+      </section>
+    );
+  }
+}
 
 App.propTypes = {
-  name: string.isRequired
+  userId: number.isRequired,
+  token: string.isRequired,
 };
 
 export default inject(
-  ({store}) => ({
-    name: store.name
-  })
+  ({store}) => {
+    return {
+      userId: store.userId,
+      token: store.token
+    };
+  }
 )(
   observer(App)
 );

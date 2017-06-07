@@ -3,7 +3,10 @@ import {observable} from 'mobx';
 class Store {
 
   @observable
-  name = `artbuddies`
+  userId = 0
+
+  @observable
+  token = ``
 
 }
 

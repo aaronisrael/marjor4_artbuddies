@@ -1,4 +1,4 @@
-# Artbuddies
+# ArtBuddies
 
 In de stad zullen de jonge Gentenaren posters zien die hun verlangen naar een museum bezoek aanspreekt. Op deze posters zal het duidelijk worden dat er meer (jonge) mensen in Gent zijn die ook graag naar het museum willen. Maar die met het zelfde probleem worstelen; ze willen zelf wel maar hun vrienden niet en willen hun probleem niet bij hun vrienden neer leggen. De poster zal lijden naar het bezoeken van een mobiele website waarop zij een geselecteerde selectie zien van het aanbod van het Museum van Schone Kunsten in Gent (MSK). Deze posters zullen verspreid door de stad hangen, hier is voor gekozen omdat blijkt dat veel individuen en groepen meer in de stad te vinden zijn dan aan de rand, waar ook het museum is gevestigd.
 

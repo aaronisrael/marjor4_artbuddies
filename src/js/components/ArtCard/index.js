@@ -14,7 +14,7 @@ const ArtCard = ({name, photo}) => {
     <div>
       <li className='tweet'>
         {name}
-        <img src={`../../../assets/img/art/${photo}`} alt='test' />
+        <img src={`../../../assets/img/art/${photo}/100.jpg`} alt='test' />
         <button type='button'>Like</button>
         <button type='button'>Dislike</button>
       </li>

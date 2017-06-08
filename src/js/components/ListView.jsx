@@ -2,7 +2,7 @@ import React from 'react';
 
 import DataList from '../../assets/data/artList.json';
 
-
+import TopBar from './TopBar';
 import Card from './ArtCard/';
 
 const ListView = () => {
@@ -10,20 +10,23 @@ const ListView = () => {
   console.log(DataList.data);
 
   return (
-    <ul>
-      {
-        DataList.data.map(
-          d => (
-            <Card
-              {...d}
-              key={d.id}
-              name={d.name}
-              img={d.photo}
-            />
+    <div>
+      <TopBar />
+      <ul>
+        {
+          DataList.data.map(
+            d => (
+              <Card
+                {...d}
+                key={d.id}
+                name={d.name}
+                img={d.photo}
+              />
+            )
           )
-        )
-      }
-    </ul>
+        }
+      </ul>
+    </div>
   );
 
 };

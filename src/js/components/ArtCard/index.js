@@ -11,13 +11,14 @@ const ArtCard = ({name, photo}) => {
 
   return (
 
-    <li className='tweet'>
-      {name}
-      <img src={`../../../assets/img/art/${photo}`} alt='test' />
-      <button type='button'>Like</button>
-      <button type='button'>Dislike</button>
-    </li>
-
+    <div>
+      <li className='tweet'>
+        {name}
+        <img src={`../../../assets/img/art/${photo}`} alt='test' />
+        <button type='button'>Like</button>
+        <button type='button'>Dislike</button>
+      </li>
+    </div>
   );
 
 };

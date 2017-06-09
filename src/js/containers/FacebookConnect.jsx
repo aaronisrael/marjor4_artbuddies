@@ -1,61 +1,47 @@
-//import React from 'react';
-import React, {Component} from 'react';
+import React from 'react';
 import DevTools from 'mobx-react-devtools';
 
-import {observer, inject} from 'mobx-react';
-import {number, string} from 'prop-types';
+import {observer, inject, PropTypes} from 'mobx-react';
 
-import {Redirect} from 'react-router-dom';
+import {withRouter} from 'react-router';
 
 import FacebookLogin from '../lib/facebookLogin';
 
 
-class FacebookConnect extends Component {
-  constructor(props, context, userId, token, router) {
-    super(props, context, userId, token, router);
-    this.state = {
-      userId, token
-    };
-  }
+const FacebookConnect = ({store, history}) => {
 
-  responseFacebook(response, userId, token) {
-    userId = response.userID;
-    token = response.accessToken;
-    console.log(userId);
-    console.log(token);
-  }
+  const {
+    add
+  } = store;
 
-  render() {
-    return (
+  const responseFacebook = response => {
+    add(response.userID, response.accessToken);
+    history.push(`/ListView`);
+  };
+
+  return (
+    <section>
+
+      {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
+
       <section>
-
-        {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
-
-        <section>
-          <FacebookLogin
-              autoLoad
-              appId='711579455681352'
-              callback={this.responseFacebook}
-            />
-          <Redirect to='/ListView' />
-        </section>
+        <FacebookLogin
+            autoLoad
+            appId='711579455681352'
+            callback={responseFacebook}
+        />
       </section>
-    );
-  }
-}
-
-FacebookConnect.propTypes = {
-  userId: number.isRequired,
-  token: string.isRequired,
+    </section>
+  );
 };
 
-export default inject(
-  ({store}) => {
-    return {
-      userId: store.userId,
-      token: store.token
-    };
-  }
-)(
-  observer(FacebookConnect)
+FacebookConnect.propTypes = {
+  store: PropTypes.observableObject.isRequired,
+  history: React.PropTypes.shape({
+    push: React.PropTypes.func.isRequired,
+  }).isRequired,
+};
+
+export default inject(`store`)(
+  withRouter(observer(FacebookConnect))
 );

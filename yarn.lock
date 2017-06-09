@@ -4299,6 +4299,10 @@ mobx-react-devtools@^4.2.11:
   version "4.2.13"
   resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-4.2.13.tgz#44b8bab566cefb199136770ca65278c646bbb0b5"
 
+mobx-react-router@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/mobx-react-router/-/mobx-react-router-4.0.1.tgz#72f67b5c637d187595415500e8afa5cddb2231ab"
+
 mobx-react@^4.1.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-4.2.1.tgz#35324834b71ae27a7553d76ad413e5f96ba40db5"

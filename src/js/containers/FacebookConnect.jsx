@@ -11,11 +11,11 @@ import FacebookLogin from '../lib/facebookLogin';
 const FacebookConnect = ({store, history}) => {
 
   const {
-    add
+    login
   } = store;
 
   const responseFacebook = response => {
-    add(response.userID, response.accessToken);
+    login(response.userID, response.accessToken);
     history.push(`/ListView`);
   };
 

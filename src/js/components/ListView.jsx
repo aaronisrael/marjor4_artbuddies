@@ -7,8 +7,6 @@ import Card from './ArtCard/';
 
 const ListView = () => {
 
-  console.log(DataList.data);
-
   return (
     <div>
       <TopBar />

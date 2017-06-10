@@ -15,21 +15,44 @@ class Store {
   @observable
   users = []
 
-  add = (userId, token) => {
+  init = () => {
+    artbuddiesAPI.read()
+    .then(({users}) => {this._add(...users);});
+  }
+
+  constructor() {
+    this.init();
+  }
+
+  login = (userId, token) => {
     console.log(userId);
+    this.userId = userId;
+    this.token = token;
     console.log(token);
+    artbuddiesAPI.exist(userId).then(this.checkIfExist);
+  }
 
-    console.log(artbuddiesAPI.read());
+  add = () => {
+    console.log(this.userId);
+    console.log(this.token);
+    artbuddiesAPI.create(this.userId).then(this._add);
+  }
 
-    console.log(artbuddiesAPI.exist(userId));
-    artbuddiesAPI.create(userId).then(this._add);
+  @action
+  checkIfExist = ({...users}) => {
+    console.log(users.artbuddies);
+    if (users.artbuddies.length === 0) {
+      console.log(`nieuwe gebruiker`);
+      this.add();
+    }
+    else {
+      console.log(`is al aangemaakt`);
+    }
   }
 
   @action
   _add = (...users) => {
-
     users.forEach(t => {
-      console.log(t.userId);
       this.users.push(
         new Artbuddy(t)
       );

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import DevTools from 'mobx-react-devtools';
 
-import {observer, inject} from 'mobx-react';
-import {number, string} from 'prop-types';
+import {observer} from 'mobx-react';
 
 import {withRouter} from 'react-router';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -13,11 +12,9 @@ import Matches from '../components/Matches';
 import Profile from '../components/Profile';
 
 class App extends Component {
-  constructor(props, context, userId, token) {
-    super(props, context, userId, token);
-    this.state = {
-      userId, token, history
-    };
+  constructor(props, context) {
+    super(props, context);
+    this.state = {};
   }
 
   render(history) {
@@ -39,18 +36,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  userId: number.isRequired,
-  token: string.isRequired,
-};
-
-export default inject(
-  ({store}) => {
-    return {
-      userId: store.userId,
-      token: store.token
-    };
-  }
-)(
-  withRouter(observer(App))
-);
+export default withRouter(observer(App));

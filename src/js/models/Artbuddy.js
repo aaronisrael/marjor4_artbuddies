@@ -1,6 +1,4 @@
 
-//import uuid from 'uuid';
-
 export default class Artbuddy {
 
   userId = ``
@@ -8,6 +6,7 @@ export default class Artbuddy {
   modified = ``
   _id = ``
   isActive = ``
+  rating = ``
 
 
   constructor({
@@ -15,6 +14,7 @@ export default class Artbuddy {
     created,
     modified,
     userId,
+    rating,
     isActive
   }) {
 
@@ -22,6 +22,7 @@ export default class Artbuddy {
     this.created = created;
     this.modified = modified;
     this.userId = userId;
+    this.rating = rating;
     this.isActive = isActive;
 
   }

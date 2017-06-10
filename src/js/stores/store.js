@@ -15,6 +15,9 @@ class Store {
   @observable
   users = []
 
+  @observable
+  rating = {art0: 0, art1: 0, art2: 0, art3: 0, art4: 0, art5: 0, art6: 0, art7: 0, art8: 0, art9: 0}
+
   init = () => {
     artbuddiesAPI.read()
     .then(({users}) => {this._add(...users);});
@@ -35,7 +38,8 @@ class Store {
   add = () => {
     console.log(this.userId);
     console.log(this.token);
-    artbuddiesAPI.create(this.userId).then(this._add);
+    console.log(this.rating);
+    artbuddiesAPI.create(this.userId, this.rating).then(this._add);
   }
 
   @action

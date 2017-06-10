@@ -16,15 +16,14 @@ export default {
 
   },
 
-  create: userId => {
-
+  create: (userId, rating) => {
     const method = `POST`;
     const body = new FormData();
     body.append(`userId`, userId);
+    body.append(`rating`, rating);
 
     return fetch(url, {method, body})
       .then(r => r.json());
-
   },
 
   delete: _id => {

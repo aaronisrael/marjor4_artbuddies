@@ -6,6 +6,11 @@ const schema = {
     type: Number,
     required: true,
     validation: Joi.number()
+  },
+  rating: {
+    type: Object,
+    required: true,
+    validation: Joi.object()
   }
 
 };

@@ -11,8 +11,12 @@ const schema = {
     type: Object,
     required: true,
     validation: Joi.object()
-  }
-
+  },
+  name: {
+    type: String,
+    required: true,
+    validation: Joi.string()
+  },
 };
 
 module.exports = {schema};

@@ -17,6 +17,7 @@ const ListView = () => {
               <Card
                 {...d}
                 key={d.id}
+                idkey={d.id}
                 name={d.name}
                 img={d.photo}
               />

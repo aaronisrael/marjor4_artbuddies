@@ -7,6 +7,7 @@ export default class Artbuddy {
   _id = ``
   isActive = ``
   rating = ``
+  name = ``
 
 
   constructor({
@@ -15,7 +16,8 @@ export default class Artbuddy {
     modified,
     userId,
     rating,
-    isActive
+    isActive,
+    name
   }) {
 
     this._id = _id;
@@ -24,6 +26,7 @@ export default class Artbuddy {
     this.userId = userId;
     this.rating = rating;
     this.isActive = isActive;
+    this.name = name;
 
   }
 

@@ -16,14 +16,27 @@ export default {
 
   },
 
-  create: (userId, rating) => {
+  create: (userId, rating, name) => {
+    console.log(userId);
+    console.log(rating);
     const method = `POST`;
     const body = new FormData();
     body.append(`userId`, userId);
-    body.append(`rating`, rating);
+    const ratingJson = JSON.stringify(rating);
+    body.append(`rating`, ratingJson);
+    body.append(`name`, name);
 
     return fetch(url, {method, body})
       .then(r => r.json());
+  },
+
+  update: (_id, rating) => {
+    const method = `PATCH`;
+    const ratingJson = JSON.stringify(rating);
+    const body = new FormData();
+    body.append(`rating`, ratingJson);
+
+    return fetch(`${url}/${_id}`, {method, body});
   },
 
   delete: _id => {

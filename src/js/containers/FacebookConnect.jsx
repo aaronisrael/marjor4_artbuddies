@@ -3,6 +3,8 @@ import DevTools from 'mobx-react-devtools';
 
 import {observer, inject, PropTypes} from 'mobx-react';
 
+import {shape, func} from 'prop-types';
+
 import {withRouter} from 'react-router';
 
 import FacebookLogin from '../lib/facebookLogin';
@@ -37,8 +39,8 @@ const FacebookConnect = ({store, history}) => {
 
 FacebookConnect.propTypes = {
   store: PropTypes.observableObject.isRequired,
-  history: React.PropTypes.shape({
-    push: React.PropTypes.func.isRequired,
+  history: shape({
+    push: func.isRequired,
   }).isRequired,
 };
 

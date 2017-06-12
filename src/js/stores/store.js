@@ -114,11 +114,11 @@ class Store {
     artbuddiesAPI.updateFbPhoto(this._id, photo);
   }
 
-  findMatch = () => {
-    artbuddiesAPI.read().then(data => {
-      console.log(data);
-    });
-  }
+  // findMatch = () => {
+  //   artbuddiesAPI.read().then(data => {
+  //     console.log(data);
+  //   });
+  // }
 }
 
 const store = new Store();

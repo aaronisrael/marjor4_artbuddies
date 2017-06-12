@@ -17,6 +17,11 @@ const schema = {
     required: true,
     validation: Joi.string()
   },
+  photo: {
+    type: String,
+    required: true,
+    validation: Joi.string()
+  }
 };
 
 module.exports = {schema};

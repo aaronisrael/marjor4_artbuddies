@@ -8,6 +8,7 @@ export default class Artbuddy {
   isActive = ``
   rating = ``
   name = ``
+  photo = ``
 
 
   constructor({
@@ -17,7 +18,8 @@ export default class Artbuddy {
     userId,
     rating,
     isActive,
-    name
+    name,
+    photo,
   }) {
 
     this._id = _id;
@@ -27,7 +29,7 @@ export default class Artbuddy {
     this.rating = rating;
     this.isActive = isActive;
     this.name = name;
-
+    this.photo = photo;
   }
 
 }

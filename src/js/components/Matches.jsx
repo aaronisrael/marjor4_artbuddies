@@ -2,8 +2,17 @@ import React from 'react';
 
 import TopBar from './TopBar';
 
+import {observer, inject, PropTypes} from 'mobx-react';
 
-const Matches = () => {
+
+const Matches = ({store}) => {
+
+  const {
+    findMatch
+  } = store;
+
+  findMatch();
+
   return (
     <div>
       <TopBar />
@@ -11,4 +20,11 @@ const Matches = () => {
     </div>
   );
 };
-export default Matches;
+
+Matches.propTypes = {
+  store: PropTypes.observableObject.isRequired,
+};
+
+export default inject(`store`)(
+  observer(Matches)
+);

@@ -39,7 +39,7 @@ class FacebookLogin extends React.Component {
     textButton: `Login with Facebook`,
     typeButton: `button`,
     redirectUri: typeof window !== `undefined` ? window.location.href : `/`,
-    scope: `public_profile,email,user_friends`,
+    scope: `public_profile, user_friends, `,
     xfbml: false,
     cookie: false,
     reAuthenticate: false,

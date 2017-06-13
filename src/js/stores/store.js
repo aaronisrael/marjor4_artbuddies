@@ -114,11 +114,16 @@ class Store {
     artbuddiesAPI.updateFbPhoto(this._id, photo);
   }
 
-  // findMatch = () => {
-  //   artbuddiesAPI.read().then(data => {
-  //     console.log(data);
-  //   });
-  // }
+  findMatch = () => {
+    artbuddiesAPI.read().then(data => {
+      console.log(this._id);
+      console.log(data.artbuddies);
+      for (let i = 0;i < data.artbuddies.length;i ++) {
+        console.log(data.artbuddies[i]);
+      }
+      data.artbuddies;
+    });
+  }
 }
 
 const store = new Store();

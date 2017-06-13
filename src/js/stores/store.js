@@ -21,12 +21,6 @@ class Store {
   @observable
   _id = ``
 
-  // @observable
-  // fbName = ``
-  //
-  // @observable
-  // fbPhoto = ``
-
   init = () => {
     artbuddiesAPI.read()
     .then(({users}) => {this._add(...users);});
@@ -45,7 +39,7 @@ class Store {
   }
 
   add = () => {
-    artbuddiesAPI.create(this.userId, toJS(this.rating), `aaron`, `photo`).then(this._add);
+    artbuddiesAPI.create(this.userId, toJS(this.rating), `name`, `photo`).then(this._add).then(this.getID);
   }
 
   update = (liked, key) => {
@@ -58,13 +52,16 @@ class Store {
       value = 2;
     }
     this.rating[`art${key}`] = value;
-    console.log(this.userId);
     artbuddiesAPI.updateRating(this._id, this.rating);
   }
 
   @action
-  getID = ({...users}) => {
+  _getID = ({...users}) => {
     this._id = users.artbuddies[0]._id;
+  }
+
+  getID = () => {
+    artbuddiesAPI.exist(this.userId).then(this._getID);
   }
 
   @action
@@ -88,10 +85,7 @@ class Store {
 
   @action
   getFBData = () => {
-    console.log(this.userId);
     artbuddiesAPI.exist(this.userId).then(this.getID);
-    console.log(this.userId);
-    console.log(this.token);
     fetch(`https://graph.facebook.com/${this.userId}?access_token=${this.token}`, {
       method: `get`
     }).then(response => response.json()).then(data => {

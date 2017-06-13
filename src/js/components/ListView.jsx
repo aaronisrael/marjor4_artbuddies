@@ -1,11 +1,14 @@
 import React from 'react';
 
+// import {observer, inject, PropTypes} from 'mobx-react';
+
 import DataList from '../../assets/data/artList.json';
 
 import TopBar from './TopBar';
 import Card from './ArtCard/';
 
 const ListView = () => {
+
 
   return (
     <div>
@@ -30,4 +33,7 @@ const ListView = () => {
 
 };
 
+// export default inject(`store`)(
+//   observer(ListView)
+// );
 export default ListView;

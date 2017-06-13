@@ -20,7 +20,7 @@ const TopBar = ({store, history}) => {
 
   const handleMatches = () => {
     getFBData();
-    history.push(`/Matches`);
+    history.push(`/Matches/Friends`);
   };
 
   return (

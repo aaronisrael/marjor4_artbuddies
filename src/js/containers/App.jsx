@@ -8,7 +8,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import ListView from '../components/ListView';
 import FacebookConnect from './FacebookConnect';
-import Matches from '../components/Matches';
+import Friends from '../components/Matches/Friends';
+import Strangers from '../components/Matches/Strangers';
 import Profile from '../components/Profile';
 
 class App extends Component {
@@ -27,7 +28,8 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={FacebookConnect} />
             <Route exact path='/ListView' component={ListView} />
-            <Route exact path='/Matches' component={Matches} />
+            <Route path='/Matches/Friends' component={Friends} />
+            <Route path='/Matches/Strangers' component={Strangers} />
             <Route exact path='/Profile' component={Profile} />
           </Switch>
         </Router>

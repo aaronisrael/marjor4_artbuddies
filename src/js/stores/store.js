@@ -108,14 +108,25 @@ class Store {
     artbuddiesAPI.updateFbPhoto(this._id, photo);
   }
 
-  findMatch = () => {
-    artbuddiesAPI.read().then(data => {
-      console.log(this._id);
-      console.log(data.artbuddies);
-      for (let i = 0;i < data.artbuddies.length;i ++) {
-        console.log(data.artbuddies[i]);
+  searchId = (nameKey, myArray) => {
+    console.log(nameKey, myArray);
+    for (let i = 0;i < myArray.length;i ++) {
+      if (myArray[i]._id === nameKey) {
+        return myArray[i];
       }
-      data.artbuddies;
+    }
+  }
+
+  findMatch = () => {
+    artbuddiesAPI.exist(this.userId).then(this._findMatch);
+  }
+
+  @action
+  _findMatch = () => {
+    artbuddiesAPI.read().then(data => {
+      artbuddiesAPI.exist(this.userId).then(this.getID);
+      const myObject = this.searchId(this._id, data.artbuddies);
+      console.log(myObject.rating);
     });
   }
 }

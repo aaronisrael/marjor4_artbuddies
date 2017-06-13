@@ -20,13 +20,13 @@ const ArtCard = ({name, photo, idkey, store}) => {
   const handleDislike = () => {
     update(false, idkey);
   };
-  
+
   return (
 
     <div>
       <li className='tweet'>
         {name}
-        <img src={`../../../assets/img/art/${photo}`} alt='test' />
+        <img src={`../../../assets/img/art/${photo}/100.jpg`} alt='test' />
         <button type='button' onClick={handleLike}>Like</button>
         <button type='button' onClick={handleDislike}>Dislike</button>
       </li>

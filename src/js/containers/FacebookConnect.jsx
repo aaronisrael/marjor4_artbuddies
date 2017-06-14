@@ -28,7 +28,6 @@ const FacebookConnect = ({store, history}) => {
 
       <section>
         <FacebookLogin
-            autoLoad
             appId='711579455681352'
             callback={responseFacebook}
         />

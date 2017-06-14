@@ -9,11 +9,14 @@ import Card from './ArtCard/';
 
 const ListView = () => {
 
-
   return (
-    <div>
+    <div className='feed'>
       <TopBar />
-      <ul>
+      <p className='intro'>
+        Ga meteen aan de slag door onderstaande 10 kunstwerken te liken of te disliken.
+        Op basis van jouw likes en / of dislikes vinden we dan een geschikte match voor jou!
+      </p>
+      <ul className='list'>
         {
           DataList.data.map(
             d => (
@@ -28,6 +31,14 @@ const ListView = () => {
           )
         }
       </ul>
+      <section className='footer'>
+      <p className='outro'>
+        Dit waren je kunstwerken voor de maand juni 2017!
+        Vanaf <span className='red'>1 juli</span> zijn er weer <span className='red'>10 nieuwe kunstwerken </span>
+         beschikbaar voor je.
+      </p>
+      <div className='logo'></div>
+      </section>
     </div>
   );
 

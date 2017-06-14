@@ -1,15 +1,158 @@
 @import 'reset';
 
-body {
-  font-family: Roboto;
-  font-size: 1.6rem;
-  margin: 2rem;
+:root {
+  --msk: #e83739;
+  --light: #c1c1c1;
 }
 
-header {
-  margin: 2rem 0;
+body {
+  font-family: Avenir;
+  font-size: 1.6rem;
+  color: #262626;
 }
 
 h1 {
   font-size: 3rem;
+}
+
+nav {
+  box-shadow: 0 .5rem 1rem #cacaca;
+}
+
+.navigatie {
+  width: 100vw;
+  color: var(--light);
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  font-weight: 800;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+
+  & a {
+    color: var(--msk);
+    text-decoration: none;
+  }
+}
+
+.intro {
+  width: 90vw;
+  color: var(--light);
+  margin-top: 5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: lighter;
+}
+
+.feed {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  width: 100vw;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-end;
+  width: 90vw;
+  margin: 2rem 0 15rem;
+  box-shadow: 0 .5rem 1rem lightgray;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.title-container {
+  position: absolute;
+  align-self: flex-end;
+  display: flex;
+  border: 1px solid red;
+}
+
+.work-name {
+  display: flex;
+  font-family: denmark;
+  font-weight: 600;
+  font-size: 3rem;
+  width: 50vw;
+  order: 2;
+
+  &::after {
+    content: '';
+    width: .6rem;
+    height: 10rem;
+    background-color: var(--msk);
+    position: absolute;
+    top: -7rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+}
+
+.work-img {
+  width: 90vw;
+  object-fit: cover;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 .5rem 1rem lightgray;
+  margin: .5rem;
+}
+
+.heart {
+  background-image: url(../assets/img/assets/heart.png);
+  width: 4.1rem;
+  height: 3.6rem;
+}
+
+.kruis {
+  background-image: url(../assets/img/assets/kruis.png);
+  width: 3.4rem;
+  height: 3.4rem;
+}
+
+.outro {
+  color: var(--light);
+  width: 80vw;
+  text-align: center;
+  line-height: 150%;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.red {
+  color: var(--msk);
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-image: url(../assets/img/assets/logo.png);
+  width: 7.1rem;
+  height: 6.2rem;
+  margin: 2rem;
 }

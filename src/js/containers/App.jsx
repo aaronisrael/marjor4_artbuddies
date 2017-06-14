@@ -1,39 +1,35 @@
 import React, {Component} from 'react';
 import DevTools from 'mobx-react-devtools';
 
-import {observer, inject} from 'mobx-react';
-import {number, string} from 'prop-types';
+import {observer} from 'mobx-react';
 
+import {withRouter} from 'react-router';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import ListView from '../components/ListView';
 import FacebookConnect from './FacebookConnect';
-import Matches from '../components/Matches';
+import Friends from '../components/Matches/Friends';
+import Strangers from '../components/Matches/Strangers';
 import Profile from '../components/Profile';
 
 class App extends Component {
-  constructor(props, context, userId, token) {
-    super(props, context, userId, token);
-    this.state = {
-      userId, token
-    };
+  constructor(props, context) {
+    super(props, context);
+    this.state = {};
   }
 
-  requireAuth(token) {
-    console.log(token);
-  }
-
-  render(token) {
+  render(history) {
     return (
       <section>
 
         {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
-        <Router>
+        <Router history={history}>
           <Switch>
             <Route exact path='/' component={FacebookConnect} />
-            <Route exact path='/ListView' component={ListView} onEnter={this.requireAuth(token)} />
-            <Route exact path='/Matches' component={Matches} />
+            <Route exact path='/ListView' component={ListView} />
+            <Route path='/Matches/Friends' component={Friends} />
+            <Route path='/Matches/Strangers' component={Strangers} />
             <Route exact path='/Profile' component={Profile} />
           </Switch>
         </Router>
@@ -42,18 +38,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  userId: number.isRequired,
-  token: string.isRequired,
-};
-
-export default inject(
-  ({store}) => {
-    return {
-      userId: store.userId,
-      token: store.token
-    };
-  }
-)(
-  observer(App)
-);
+export default withRouter(observer(App));

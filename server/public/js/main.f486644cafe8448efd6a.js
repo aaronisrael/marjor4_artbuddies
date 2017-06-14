@@ -5845,7 +5845,7 @@ module.exports = canDefineProperty;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(38);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/components/TopBar.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/TopBar.jsx';
 
 
 
@@ -15451,7 +15451,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__stores__ = __webpack_require__(110);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/script.js';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/script.js';
 /* eslint-disable react/jsx-filename-extension */
 
 
@@ -15511,7 +15511,7 @@ init();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mobx_react__);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/components/ArtCard/index.js';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/ArtCard/index.js';
 /* eslint-disable react/jsx-filename-extension */
 
 
@@ -15589,7 +15589,7 @@ ArtCard.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ArtCard___ = __webpack_require__(102);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/components/ListView.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/ListView.jsx';
 
 
 
@@ -15649,7 +15649,7 @@ ListView.displayName = 'ListView';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TopBar__ = __webpack_require__(40);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/components/Matches.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Matches.jsx';
 
 
 
@@ -15692,7 +15692,7 @@ Matches.displayName = 'Matches';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TopBar__ = __webpack_require__(40);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/components/Profile.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Profile.jsx';
 
 
 
@@ -15745,7 +15745,7 @@ Profile.displayName = 'Profile';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__FacebookConnect__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Matches__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Profile__ = __webpack_require__(105);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/containers/App.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/containers/App.jsx';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15876,7 +15876,7 @@ App.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__lib_facebookLogin__ = __webpack_require__(108);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/containers/FacebookConnect.jsx';
+var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/containers/FacebookConnect.jsx';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -15990,7 +15990,7 @@ FacebookConnect.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToParams__ = __webpack_require__(109);
 var _class,
     _temp2,
-    _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/major4groep10/artbuddies/src/js/lib/facebookLogin.jsx';
+    _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/lib/facebookLogin.jsx';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -30727,4 +30727,4 @@ module.exports = __webpack_require__(100);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.bf32bb051a7f0c50ccac.js.map
+//# sourceMappingURL=main.f486644cafe8448efd6a.js.map

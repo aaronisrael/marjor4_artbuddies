@@ -5850,7 +5850,7 @@ module.exports = canDefineProperty;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_router__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(38);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/TopBar.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/TopBar.jsx';
 
 
 
@@ -5887,8 +5887,7 @@ var TopBar = function TopBar(_ref) {
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'ul',
-      {
-        __source: {
+      { className: 'navigatie', __source: {
           fileName: _jsxFileName,
           lineNumber: 28
         }
@@ -11798,7 +11797,7 @@ module.exports = ReactNoopUpdateQueue;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mobx_react__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_mobx_react__);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Matches/index.js';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/Matches/index.js';
 /* eslint-disable react/jsx-filename-extension */
 
 
@@ -15555,7 +15554,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__stores__ = __webpack_require__(114);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/script.js';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/script.js';
 /* eslint-disable react/jsx-filename-extension */
 
 
@@ -15615,7 +15614,7 @@ init();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mobx_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mobx_react__);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/ArtCard/index.js';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/ArtCard/index.js';
 /* eslint-disable react/jsx-filename-extension */
 
 
@@ -15640,45 +15639,102 @@ var ArtCard = function ArtCard(_ref) {
     update(false, idkey);
   };
 
+  var getPosition = function getPosition() {
+    if (idkey % 2) {
+      return 'flex-start';
+    } else {
+      return 'flex-end';
+    }
+  };
+
+  var getOrder = function getOrder() {
+    if (idkey % 2) {
+      console.log('yo');
+      return '1,2';
+    } else {
+      return '2,1';
+    }
+  };
+
+  var divStyle = {
+    display: 'flex',
+    justifyContent: '' + getPosition()
+  };
+
+  var liStyle = {
+    order: '' + getOrder()
+  };
+
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
-    {
-      __source: {
+    { style: divStyle, __source: {
         fileName: _jsxFileName,
-        lineNumber: 26
+        lineNumber: 52
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'li',
-      { className: 'tweet', __source: {
+      { className: 'card', __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 53
         }
       },
-      name,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '../../../assets/img/art/' + photo + '/100.jpg', alt: 'test', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29
-        }
-      }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'button',
-        { type: 'button', onClick: handleLike, __source: {
+        'div',
+        { className: 'title-container', style: liStyle, __source: {
             fileName: _jsxFileName,
-            lineNumber: 30
+            lineNumber: 54
           }
         },
-        'Like'
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h2',
+          { className: 'work-name', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 55
+            }
+          },
+          name
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'buttons', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'button',
+            { className: 'button', type: 'button', onClick: handleLike, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              }
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'heart', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              }
+            })
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'button',
+            { className: 'button', type: 'button', onClick: handleDislike, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 58
+              }
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'kruis', __source: {
+                fileName: _jsxFileName,
+                lineNumber: 58
+              }
+            })
+          )
+        )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'button',
-        { type: 'button', onClick: handleDislike, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 31
-          }
-        },
-        'Dislike'
-      )
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'work-img', src: '../../../assets/img/art/' + photo + '/100.jpg', alt: 'test', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        }
+      })
     )
   );
 };
@@ -15706,7 +15762,7 @@ ArtCard.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ArtCard___ = __webpack_require__(103);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/ListView.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/ListView.jsx';
 
 
 // import {observer, inject, PropTypes} from 'mobx-react';
@@ -15720,24 +15776,31 @@ var ListView = function ListView() {
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
-    {
-      __source: {
+    { className: 'feed', __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 13
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__TopBar__["a" /* default */], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 14
       }
     }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'ul',
-      {
-        __source: {
+      'p',
+      { className: 'intro', __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 15
+        }
+      },
+      'Ga meteen aan de slag door onderstaande 10 kunstwerken te liken of te disliken. Op basis van jouw likes en / of dislikes vinden we dan een geschikte match voor jou!'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'ul',
+      { className: 'list', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
         }
       },
       __WEBPACK_IMPORTED_MODULE_1__assets_data_artList_json___default.a.data.map(function (d) {
@@ -15748,9 +15811,51 @@ var ListView = function ListView() {
           img: d.photo,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 23
           }
         }));
+      })
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'section',
+      { className: 'footer', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'p',
+        { className: 'outro', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 35
+          }
+        },
+        'Dit waren je kunstwerken voor de maand juni 2017! Vanaf ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'span',
+          { className: 'red', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            }
+          },
+          '1 juli'
+        ),
+        ' zijn er weer ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'span',
+          { className: 'red', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 37
+            }
+          },
+          '10 nieuwe kunstwerken '
+        ),
+        'beschikbaar voor je.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'logo', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        }
       })
     )
   );
@@ -15770,7 +15875,7 @@ ListView.displayName = 'ListView';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(65);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Matches/Friends.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/Matches/Friends.jsx';
 
 
 
@@ -15804,7 +15909,7 @@ Friends.displayName = 'Friends';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(65);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Matches/Strangers.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/Matches/Strangers.jsx';
 
 
 
@@ -15838,7 +15943,7 @@ Strangers.displayName = 'Strangers';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TopBar__ = __webpack_require__(40);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/components/Profile.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/components/Profile.jsx';
 
 
 
@@ -15891,7 +15996,7 @@ Profile.displayName = 'Profile';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Matches_Friends__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Matches_Strangers__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Profile__ = __webpack_require__(107);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/containers/App.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/containers/App.jsx';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -16009,7 +16114,7 @@ App.displayName = 'App';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__lib_facebookLogin__ = __webpack_require__(111);
-var _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/containers/FacebookConnect.jsx';
+var _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/containers/FacebookConnect.jsx';
 
 
 
@@ -16159,7 +16264,7 @@ var url = '/api/artbuddies';
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToParams__ = __webpack_require__(112);
 var _class,
     _temp2,
-    _jsxFileName = '/Users/aaronisrael/Onedrive/devine/S4/MAIV/juni/dev/artbuddies/artbuddies/src/js/lib/facebookLogin.jsx';
+    _jsxFileName = '/Users/laurensvandevyver/OneDrive - Hogeschool West-Vlaanderen/2e jaar/2e semester/MajorIV/briefing juni MSK/artbuddy/marjor4_artbuddies/src/js/lib/facebookLogin.jsx';
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -31603,4 +31708,4 @@ module.exports = __webpack_require__(101);
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.fce6ea869224ecd926a6.js.map
+//# sourceMappingURL=main.30cc71ff276ce59a60f6.js.map

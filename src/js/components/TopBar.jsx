@@ -25,7 +25,7 @@ const TopBar = ({store, history}) => {
 
   return (
     <nav>
-      <ul>
+      <ul className='navigatie'>
         <li><Link to='/ListView'>Feed</Link></li>
         <li onClick={handleMatches}>Matcher</li>
         <li onClick={handleProfile}>Profile</li>

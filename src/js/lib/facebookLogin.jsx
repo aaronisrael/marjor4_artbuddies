@@ -31,7 +31,6 @@ class FacebookLogin extends React.Component {
     version: PropTypes.string,
     language: PropTypes.string,
     handleOnClick: PropTypes.func,
-    autoLoad: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
@@ -87,7 +86,7 @@ class FacebookLogin extends React.Component {
   }
 
   setFbAsyncInit() {
-    const {appId, xfbml, cookie, version, autoLoad} = this.props;
+    const {appId, xfbml, cookie, version} = this.props;
     window.fbAsyncInit = () => {
       window.FB.init({
         version: `v${version}`,
@@ -96,9 +95,6 @@ class FacebookLogin extends React.Component {
         cookie,
       });
       this.setStateIfMounted({isSdkLoaded: true});
-      if (autoLoad || window.location.search.includes(`facebookdirect`)) {
-        window.FB.getLoginStatus(this.checkLoginAfterRefresh);
-      }
     };
   }
 

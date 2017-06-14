@@ -11,6 +11,10 @@ import FacebookConnect from './FacebookConnect';
 import Friends from '../components/Matches/Friends';
 import Strangers from '../components/Matches/Strangers';
 import Profile from '../components/Profile';
+import ListDetail from '../components/ArtCard/Detail';
+import OnboardingStem from '../components/OnboardingStem';
+import OnboardingMatch from '../components/OnboardingMatch';
+import OnboardingInvite from '../components/OnboardingInvite';
 
 class App extends Component {
   constructor(props, context) {
@@ -27,7 +31,11 @@ class App extends Component {
         <Router history={history}>
           <Switch>
             <Route exact path='/' component={FacebookConnect} />
+            <Route exact path='/Onboarding1' component={OnboardingStem} />
+            <Route exact path='/Onboarding2' component={OnboardingMatch} />
+            <Route exact path='/Onboarding3' component={OnboardingInvite} />
             <Route exact path='/ListView' component={ListView} />
+            <Route exact path='/ListView/art0' component={ListDetail} />
             <Route path='/Matches/Friends' component={Friends} />
             <Route path='/Matches/Strangers' component={Strangers} />
             <Route exact path='/Profile' component={Profile} />

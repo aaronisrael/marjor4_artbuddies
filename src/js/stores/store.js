@@ -21,6 +21,12 @@ class Store {
   @observable
   _id = ``
 
+  @observable
+  myName = ``
+
+  @observable
+  myPhoto = ``
+
   init = () => {
     artbuddiesAPI.read()
     .then(({users}) => {this._add(...users);});
@@ -126,7 +132,8 @@ class Store {
     artbuddiesAPI.read().then(data => {
       artbuddiesAPI.exist(this.userId).then(this.getID);
       const myObject = this.searchId(this._id, data.artbuddies);
-      console.log(myObject.rating);
+      this.myName = myObject.name;
+      this.myPhoto = myObject.photo;
     });
   }
 }

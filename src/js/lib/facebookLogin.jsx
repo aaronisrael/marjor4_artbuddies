@@ -176,10 +176,10 @@ class FacebookLogin extends React.Component {
   render() {
     return (
       <span>
-        <button
+        <button className='fbbutton'
           onClick={this.handleOnClick}
         >
-          login met facebook
+          <div className='fblogo'></div> Log in met facebook
         </button>
       </span>
     );

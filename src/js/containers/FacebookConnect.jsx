@@ -22,14 +22,16 @@ const FacebookConnect = ({store, history}) => {
   };
 
   return (
-    <section>
+    <section className='onboarding'>
 
       {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
-      <section>
-        <h1>Vind jouw echte Artbuddy</h1>
-        <p>Met de hulp van dit platform willen we jou de kans geven om jouw échte Artbuddy te vinden.</p>
-        <p>Deze Artbuddy is net als jou geïnteresseerd in kunst en zoekt ook een buddy om mee naar het MSK te gaan. Log in en vind de jouwe!</p>
+      <section className='onboard-wrap'>
+        <div className='logogroot'></div>
+        <div className='ellipse1'></div>
+        <h1 className='onboard-title'>Vind <br /> jouw <br /> echte <br /> Artbuddy</h1>
+        <p className='onboard-text'>Met de hulp van dit platform willen we jou de kans geven om jouw échte Artbuddy te vinden.</p> <br />
+        <p className='onboard-text'>Deze Artbuddy is net als jou geïnteresseerd in kunst en zoekt ook een buddy om mee naar het MSK te gaan. Log in en vind de jouwe!</p>
         <FacebookLogin
             appId='711579455681352'
             callback={responseFacebook}

@@ -89,7 +89,7 @@ nav {
 }
 
 .navigatie a{
-  color: #e83739;
+  /*color: var(--msk);*/
   text-decoration: none;
 }
 
@@ -130,6 +130,9 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .list-center {
@@ -155,7 +158,8 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 90vw;
+  width: 960px;
+  width: 60rem;
   margin: 32px 0 240px;
   margin: 2rem 0 15rem;
   box-shadow: 0 .5rem 1rem lightgray;
@@ -173,7 +177,8 @@ nav {
           justify-content: space-between;
   margin-top: 160px;
   margin-top: 10rem;
-  width: 90vw;
+  width: 960px;
+  width: 60rem;
 }
 
 .work-name {
@@ -188,6 +193,8 @@ nav {
   margin-top: 8rem;
   padding-right: 32px;
   padding-right: 2rem;
+  margin-right: 32px;
+  margin-right: 2rem;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2
@@ -326,11 +333,7 @@ nav {
 }
 
 .active {
-  background-color: #e83739
-}
-
-.active a{
-  color: white;
+  color: #e83739;
 }
 
 .friend-button {
@@ -353,7 +356,8 @@ nav {
   -ms-flex-item-align: center;
       align-self: center;
   margin: 32px 0;
-  margin: 2rem 0
+  margin: 2rem 0;
+  text-decoration: none
 }
 
 .match a{
@@ -387,17 +391,15 @@ nav {
 }
 
 .match-name {
+
   font-family: denmark;
   font-weight: bold;
   font-size: 36.8px;
   font-size: 2.3rem;
   margin: 16px 0;
-  margin: 1rem 0
-}
-
-.match-name a{
+  margin: 1rem 0;
   color: #262626;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .match-name::before{
@@ -958,6 +960,30 @@ h3 {
   color: #e83739;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+  .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 90vw;
+  }
+
+  .title-container {
+    width: 90vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map*/

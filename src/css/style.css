@@ -31,7 +31,7 @@ nav {
   text-transform: uppercase;
 
   & a {
-    color: var(--msk);
+    /*color: var(--msk);*/
     text-decoration: none;
   }
 }
@@ -57,6 +57,7 @@ nav {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .list-center {
@@ -70,7 +71,7 @@ nav {
 .card {
   display: flex;
   justify-content: flex-end;
-  width: 90vw;
+  width: 60rem;
   margin: 2rem 0 15rem;
   box-shadow: 0 .5rem 1rem lightgray;
 }
@@ -81,7 +82,7 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-top: 10rem;
-  width: 90vw;
+  width: 60rem;
 }
 
 .work-name {
@@ -91,6 +92,7 @@ nav {
   font-size: 3rem;
   margin-top: 8rem;
   padding-right: 2rem;
+  margin-right: 2rem;
   order: 2;
 
   &::after {
@@ -185,11 +187,7 @@ nav {
 }
 
 .active {
-  background-color: var(--msk);
-
-  & a {
-    color: white;
-  }
+  color: var(--msk);
 }
 
 .friend-button {
@@ -205,6 +203,7 @@ nav {
   align-items: center;
   align-self: center;
   margin: 2rem 0;
+  text-decoration: none;
 
   & a {
     color: #262626;
@@ -229,15 +228,13 @@ nav {
 }
 
 .match-name {
+
   font-family: denmark;
   font-weight: bold;
   font-size: 2.3rem;
   margin: 1rem 0;
-
-  & a {
-    color: #262626;
-    text-decoration: none;
-  }
+  color: #262626;
+  text-decoration: none;
 
   &::before {
     content: '';
@@ -634,4 +631,21 @@ h3 {
   color: var(--msk);
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media (width <= 700px) {
+
+  .list {
+    flex-direction: column;
+  }
+
+  .card {
+    display: flex;
+    justify-content: flex-end;
+    width: 90vw;
+  }
+
+  .title-container {
+    width: 90vw;
+  }
 }

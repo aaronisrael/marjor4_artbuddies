@@ -6,7 +6,7 @@ import {shape, func} from 'prop-types';
 
 import {withRouter} from 'react-router';
 
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const TopBar = ({store, history}) => {
 
@@ -26,7 +26,9 @@ const TopBar = ({store, history}) => {
   return (
     <nav>
       <ul className='navigatie'>
-        <li><Link to='/ListView'>Feed</Link></li>
+        <li><NavLink to='/ListView'>Feed</NavLink></li>
+        {/* <li><NavLink onClick={handleMatches}>Matches</NavLink></li>
+        <li><NavLink onClick={handleProfile}>Profile</NavLink></li> */}
         <li onClick={handleMatches}>Matches</li>
         <li onClick={handleProfile}>Profile</li>
       </ul>

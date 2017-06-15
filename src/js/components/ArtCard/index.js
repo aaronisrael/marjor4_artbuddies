@@ -29,37 +29,45 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
   };
 
   const getPosition = () => {
-    if (idkey % 2) {
-      return `flex-start`;
+    if (window.innerWidth <= 700) {
+      if (idkey % 2) {
+        return `flex-start`;
+      } else {
+        return `flex-end`;
+      }
     } else {
-      return `flex-end`;
+      return `center`;
     }
   };
 
   const getOrder = () => {
-    if (idkey % 2) {
-      return `1`;
-    } else {
-      return `2`;
+    if (window.innerWidth <= 700) {
+      if (idkey % 2) {
+        return `1`;
+      } else {
+        return `2`;
+      }
     }
   };
 
   const getOrder2 = () => {
-    if (idkey % 2) {
-      return `2`;
-    } else {
-      return `1`;
+    if (window.innerWidth <= 700) {
+      console.log(`yooo`);
+      if (idkey % 2) {
+        return `2`;
+      } else {
+        return `1`;
+      }
     }
   };
 
-
   const getRadius = () => {
-    if (idkey % 2) {
-      console.log(`right aligned`);
-      return `0 1.5rem 1.5rem 0`;
-    } else {
-      console.log(`left aligned`);
-      return `1.5rem 0 0 1.5rem`;
+    if (window.innerWidth <= 700) {
+      if (idkey % 2) {
+        return `0 1.5rem 1.5rem 0`;
+      } else {
+        return `1.5rem 0 0 1.5rem`;
+      }
     }
   };
 

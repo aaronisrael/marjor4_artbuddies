@@ -3,7 +3,7 @@ import TopBar from '../TopBar';
 const Detail = () => {
 
   return (
-    <div>
+    <div className='detail'>
       <TopBar />
       <img className='detail-img' src={`../../../assets/img/art/1829-C/100.jpg`} alt='test' />
       <div className='detail-wrap'>

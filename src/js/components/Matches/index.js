@@ -4,13 +4,15 @@ import React from 'react';
 
 import TopBar from '../TopBar';
 
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import {observer, inject, PropTypes} from 'mobx-react';
 
-
+import {Rellax} from 'rellax';
 
 const Matches = ({store}) => {
+
+  console.log(Rellax);
 
   const {
     findMatch
@@ -22,8 +24,8 @@ const Matches = ({store}) => {
     <div className='feed'>
       <TopBar />
       <div className='toggle-friends'>
-        <li className='friend-button active'><Link to='/Matches/Friends'>Friends</Link></li>
-        <li className='friend-button'><Link to='/Matches/Strangers'>Strangers</Link></li>
+        <li className='friend-button'><NavLink to='/Matches/Friends'>Friends</NavLink></li>
+        <li className='friend-button'><NavLink to='/Matches/Strangers'>Strangers</NavLink></li>
       </div>
     </div>
   );

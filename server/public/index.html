@@ -6,29 +6,29 @@
   <title>Hello, artbuddies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-  <script>
+  <script type="text/javascript">
 
-    // https://github.com/typekit/webfontloader/blob/master/README.md
-    WebFontConfig = {
-      google: {
-        families: ['Roboto']
-      }
-      /*
-      custom: {
-        families: ['My Font', 'My Other Font:n4,i4,n7'],
-        urls: ['/fonts.css']
-      }
-      */
-    };
+  WebFontConfig = {
+    google: {
+      families: ['Avenir']
+    }
 
-    (function(d) {
-      var wf = d.createElement('script'), s = d.scripts[0];
-      wf.async = true;
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
-      s.parentNode.insertBefore(wf, s);
-    })(document);
+      WebFontConfig = {
+        custom: {
+          families: ['denmark:n4,n7'],
+          urls: ['/assets/fonts/denmark/denmark.css']
+        }
+      };
 
-  </script>
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
 
 
 <link href="/css/style.css" rel="stylesheet"></head>
@@ -40,7 +40,6 @@
 
   </div>
 
-<script type="text/javascript" src="/js/main.36dcac2c3305e0607518.js"></script></body>
-
+<script type="text/javascript" src="/js/main.5f31679e9b66630f0b2b.js"></script></body>
 
 </html>

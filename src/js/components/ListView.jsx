@@ -13,8 +13,7 @@ const ListView = () => {
     <div className='feed'>
       <TopBar />
       <p className='intro'>
-        Ga meteen aan de slag door onderstaande 10 kunstwerken te liken of te disliken.
-        Op basis van jouw likes en / of dislikes vinden we dan een geschikte match voor jou!
+        Ga meteen aan de slag door onderstaande 10 kunstwerken te liken of te disliken. Op basis van jouw likes en / of dislikes vinden we dan een geschikte match voor jou!
       </p>
       <ul className='list'>
         {

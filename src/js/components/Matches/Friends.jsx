@@ -6,7 +6,7 @@ const Friends = () => {
   return (
     <div>
       <MatchNav />
-      <ul className='list center'>
+      <ul className='list-center'>
         <a className='match' href='#popup1'>
           <img className='match-img' src='../../../../assets/img/matches/1.png' alt='' />
           <div className='name-container'>

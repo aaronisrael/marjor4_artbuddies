@@ -24,7 +24,6 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
   };
 
   const handleDetail = () => {
-    console.log(`click`);
     history.push(`/ListView/art0`);
   };
 
@@ -52,7 +51,6 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
 
   const getOrder2 = () => {
     if (window.innerWidth <= 700) {
-      console.log(`yooo`);
       if (idkey % 2) {
         return `2`;
       } else {

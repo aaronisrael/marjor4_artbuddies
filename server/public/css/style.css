@@ -69,11 +69,22 @@ h1 {
 }
 
 nav {
+  position: fixed;
+  width: 100vw;
   box-shadow: 0 .5rem 1rem #cacaca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  z-index: 99999;
 }
 
 .navigatie {
-  width: 100vw;
+  width: 1120px;
+  width: 70rem;
   color: #c1c1c1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,10 +105,11 @@ nav {
 }
 
 .intro {
-  width: 90vw;
+  width: 1120px;
+  width: 70rem;
   color: #c1c1c1;
-  margin-top: 80px;
-  margin-top: 5rem;
+  margin-top: 160px;
+  margin-top: 10rem;
   font-size: 32px;
   font-size: 2rem;
   line-height: 40px;
@@ -149,6 +161,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card {
@@ -191,8 +206,8 @@ nav {
   font-size: 3rem;
   margin-top: 128px;
   margin-top: 8rem;
-  padding-right: 32px;
-  padding-right: 2rem;
+  padding: 32px;
+  padding: 2rem;
   margin-right: 32px;
   margin-right: 2rem;
   -webkit-box-ordinal-group: 3;
@@ -235,7 +250,6 @@ nav {
 
 .button {
   background-color: white;
-  border: none;
   width: 112px;
   width: 7rem;
   height: 112px;
@@ -253,6 +267,7 @@ nav {
   box-shadow: 0 .5rem 1rem lightgray;
   margin: 8px;
   margin: .5rem;
+  border: none;
 }
 
 .heart {
@@ -273,7 +288,8 @@ nav {
 
 .outro {
   color: #c1c1c1;
-  width: 80vw;
+  width: 960px;
+  width: 60rem;
   text-align: center;
   line-height: 150%;
   font-size: 32px;
@@ -313,13 +329,14 @@ nav {
 }
 
 .toggle-friends {
-  width: 90vw;
+  width: 960px;
+  width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  margin-top: 48px;
-  margin-top: 3rem;
+  margin-top: 160px;
+  margin-top: 10rem;
   text-transform: uppercase;
   letter-spacing: 1.6px;
   letter-spacing: .1rem;
@@ -333,7 +350,13 @@ nav {
 }
 
 .active {
-  color: #e83739;
+  width: 50%;
+  height: 100%;
+  color: white;
+  padding: 19.2px 128px;
+  padding: 1.2rem 8rem;
+  border-radius: 5rem;
+  background-color: #e83739;
 }
 
 .friend-button {
@@ -342,11 +365,16 @@ nav {
   padding: 24px 16px;
   padding: 1.5rem 1rem;
   text-align: center;
-  border-radius: 5rem;
+  border-radius: 5rem
+}
+
+.friend-button a{
+  color: #c1c1c1;
 }
 
 .match {
-  width: 90vw;
+  width: 800px;
+  width: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,8 +462,8 @@ nav {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  margin-top: 48px;
-  margin-top: 3rem;
+  margin-top: 160px;
+  margin-top: 10rem;
 }
 
 .user-name {
@@ -520,7 +548,8 @@ nav {
 .popup {
   margin: 70px auto;
   background: white;
-  width: 80vw;
+  width: 1120px;
+  width: 70rem;
   position: relative;
   transition: all 5s ease-in-out;
   border-radius: 1.5rem;
@@ -533,11 +562,15 @@ nav {
           flex-direction: column;
   padding-bottom: 32px;
   padding-bottom: 2rem;
+  margin-top: 256px;
+  margin-top: 16rem;
 }
 
 .popup-img {
-  width: 80vw;
-  height: 50vw;
+  width: 1120px;
+  width: 70rem;
+  height: 640px;
+  height: 40rem;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 1.5rem 1.5rem 0 0;
@@ -577,7 +610,8 @@ nav {
 }
 
 .pop-info {
-  width: 70vw;
+  width: 960px;
+  width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,6 +687,8 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 80px;
+  padding-bottom: 5rem;
 }
 
 .logogroot {
@@ -828,20 +864,20 @@ h3 {
 }
 
 .enveloppe {
-  width: 449.6px;
-  width: 28.1rem;
-  height: 681.6px;
-  height: 42.6rem;
-  margin-top: -304px;
-  margin-top: -19rem;
+  width: 320px;
+  width: 20rem;
+  height: 484.8px;
+  height: 30.3rem;
+  margin-top: -160px;
+  margin-top: -10rem;
   background-image: url(/assets/img/assets/enveloppe.png);
 }
 
 .ellipse2 {
-  width: 480px;
-  width: 30rem;
-  height: 480px;
-  height: 30rem;
+  width: 400px;
+  width: 25rem;
+  height: 400px;
+  height: 25rem;
   border-radius: 20rem;
   background-color: white;
   box-shadow: 0 .5rem 1rem #d23234;
@@ -867,15 +903,30 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100vw;
+  width: 1120px;
+  width: 70rem;
   margin-top: 32px;
   margin-top: 2rem;
 }
 
+.detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .detail-img {
-  width: 100vw;
+  width: 1120px;
+  width: 70rem;
+  margin-top: 160px;
+  margin-top: 10rem;
 }
 
 .detail-title {
@@ -907,6 +958,9 @@ h3 {
   display: flex;
   margin: 32px;
   margin: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .detail-text {
@@ -917,8 +971,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80vw;
-  margin-left: 10vw;
+  width: 960px;
+  width: 60rem;
   margin-top: 48px;
   margin-top: 3rem;
 }
@@ -983,6 +1037,51 @@ h3 {
 
   .title-container {
     width: 90vw;
+  }
+
+  .navigatie {
+    width: 100vw;
+  }
+
+  .intro {
+    width: 90vw;
+  }
+
+  .outro {
+    width: 80vw;
+  }
+
+  .toggle-friends {
+    width: 90vw;
+  }
+
+  .match {
+    width: 90vw;
+  }
+
+  .detail-img {
+    width: 100vw;
+    margin-top: 4rem;
+  }
+
+  .detail-wrap {
+    width: 100vw;
+  }
+
+  .detail-text {
+    width: 70vw;
+  }
+
+  .popup {
+    width: 80vw;
+  }
+
+  .popup-img {
+    width: 80vw;
+  }
+
+  .pop-info {
+    width: 70vw;
   }
 }
 

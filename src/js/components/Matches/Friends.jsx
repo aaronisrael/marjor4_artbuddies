@@ -1,40 +1,34 @@
 import React from 'react';
 
 import MatchNav from './index';
+import Match from './Match';
 
-const Friends = () => {
+import {observer, inject, PropTypes} from 'mobx-react';
+
+
+const Friends = ({store}) => {
+
+  const {
+    matches
+  } = store;
+
+  console.log(matches);
+
   return (
     <div>
       <MatchNav />
       <ul className='list center'>
-        <a className='match' href='#popup1'>
-          <img className='match-img' src='../../../../assets/img/matches/1.png' alt='' />
-          <div className='name-container'>
-            <p className='match-name'>Xander Bruggeling</p>
-            <p className='match-count'>(5 matchende likes)</p>
-          </div>
-        </a>
-        <li className='match'>
-          <img className='match-img' src='../../../../assets/img/matches/2.jpg' alt='' />
-          <div className='name-container'>
-            <p className='match-name'>Mieke Rommens</p>
-            <p className='match-count'>(4 matchende likes)</p>
-          </div>
-        </li>
-        <li className='match'>
-          <img className='match-img' src='../../../../assets/img/matches/3.jpg' alt='' />
-          <div className='name-container'>
-            <p className='match-name'>Bart Verschepen</p>
-            <p className='match-count'>(3 matchende likes)</p>
-          </div>
-        </li>
-        <li className='match'>
-          <img className='match-img' src='../../../../assets/img/matches/4.jpg' alt='' />
-          <div className='name-container'>
-            <p className='match-name'>Demian Broens</p>
-            <p className='match-count'>(3 matchende likes)</p>
-          </div>
-        </li>
+        {
+          matches.map(
+            d => (
+              <Match
+                key={d.id}
+                photo={d.photo}
+                name={d.name}
+              />
+            )
+          )
+        }
       </ul>
       <div id='popup1' className='overlay'>
         <div className='popup'>
@@ -59,4 +53,11 @@ geïnteresseerd in moderne kunst, meer specifiek in beeldhouwkunst. </p>
     </div>
   );
 };
-export default Friends;
+
+Friends.propTypes = {
+  store: PropTypes.observableObject.isRequired,
+};
+
+export default inject(`store`)(
+  observer(Friends)
+);

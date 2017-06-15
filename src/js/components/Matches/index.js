@@ -16,7 +16,11 @@ const Matches = ({store}) => {
     findMatch
   } = store;
 
-  findMatch();
+  const init = () => {
+    findMatch();
+  };
+
+  init();
 
   return (
     <div className='feed'>

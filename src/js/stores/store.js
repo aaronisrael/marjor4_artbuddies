@@ -27,6 +27,12 @@ class Store {
   @observable
   myPhoto = ``
 
+  @observable
+  user = ``
+
+  @observable
+  matches = []
+
   init = () => {
     artbuddiesAPI.read()
     .then(({users}) => {this._add(...users);});
@@ -123,6 +129,21 @@ class Store {
     }
   }
 
+  myUser = () => {
+    artbuddiesAPI.exist(this.userId).then(this._myUser);
+  }
+
+  @action
+  _myUser = () => {
+    artbuddiesAPI.read().then(data => {
+      artbuddiesAPI.exist(this.userId).then(this.getID);
+      const myObject = this.searchId(this._id, data.artbuddies);
+      this.myName = myObject.name;
+      this.myPhoto = myObject.photo;
+      this.user = myObject;
+    });
+  }
+
   findMatch = () => {
     artbuddiesAPI.exist(this.userId).then(this._findMatch);
   }
@@ -134,6 +155,23 @@ class Store {
       const myObject = this.searchId(this._id, data.artbuddies);
       this.myName = myObject.name;
       this.myPhoto = myObject.photo;
+      this.user = myObject;
+      data.artbuddies.map(d => {
+        let matchCount = 0;
+        myObject.rating;
+        for (let i = 0;i <= 9;i ++) {
+          if (myObject.rating[`art${i}`] !== 0) {
+            if (myObject.rating[`art${i}`] === d.rating[`art${i}`]) {
+              matchCount ++;
+            }
+          }
+        }
+        if (matchCount >= 3) {
+          if (d._id !== myObject._id) {
+            this.matches.push(d);
+          }
+        }
+      });
     });
   }
 }

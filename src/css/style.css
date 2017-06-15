@@ -58,20 +58,29 @@ nav {
   flex-direction: column;
 }
 
+.list-center {
+  width: 100vw;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card {
   display: flex;
   justify-content: flex-end;
   width: 90vw;
   margin: 2rem 0 15rem;
   box-shadow: 0 .5rem 1rem lightgray;
-  border-radius: 1.5rem 0 0 1.5rem;
 }
 
 .title-container {
   position: absolute;
   align-self: flex-end;
   display: flex;
-  border: 1px solid red;
+  justify-content: space-between;
+  margin-top: 10rem;
+  width: 90vw;
 }
 
 .work-name {
@@ -79,7 +88,8 @@ nav {
   font-family: denmark;
   font-weight: 600;
   font-size: 3rem;
-  width: 50vw;
+  margin-top: 8rem;
+  padding-right: 2rem;
   order: 2;
 
   &::after {
@@ -88,7 +98,8 @@ nav {
     height: 10rem;
     background-color: var(--msk);
     position: absolute;
-    top: -7rem;
+    margin-left: 1rem;
+    margin-top: -7rem;
   }
 }
 
@@ -101,7 +112,6 @@ nav {
 .work-img {
   width: 90vw;
   object-fit: cover;
-  border-radius: 1.5rem 0 0 1.5rem;
 }
 
 .button {
@@ -155,4 +165,100 @@ nav {
   width: 7.1rem;
   height: 6.2rem;
   margin: 2rem;
+}
+
+.toggle-friends {
+  width: 90vw;
+  display: flex;
+  list-style: none;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  border-radius: 5rem;
+  box-shadow: 0 .5rem 1rem #cacaca;
+
+  & li a {
+    text-decoration: none;
+  }
+}
+
+.active {
+  background-color: var(--msk);
+
+  & a {
+    color: white;
+  }
+}
+
+.friend-button {
+  width: 40rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 5rem;
+}
+
+.match {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  margin: 2rem 0;
+}
+
+.match-img {
+  width: 15.5rem;
+  height: 15.5rem;
+  object-fit: cover;
+  border-radius: 10rem;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5rem;
+}
+
+.match-name {
+  font-family: denmark;
+  font-weight: bold;
+  font-size: 2.3rem;
+  margin: 1rem 0;
+
+  &::before {
+    content: '';
+    width: 8rem;
+    height: .6rem;
+    background-color: var(--msk);
+    position: absolute;
+    margin-top: .7rem;
+    margin-left: -9rem;
+  }
+}
+
+.match-count {
+  color: var(--light);
+}
+
+.profile {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-name {
+  font-family: denmark;
+  font-size: 2.8rem;
+  color: var(--msk);
+  font-weight: bold;
+  margin: 2rem 0;
+  letter-spacing: .2rem;
+}
+
+.user-about {
+  font-family: denmark;
+  font-size: 2.3rem;
+  font-weight: bold;
+  align-self: flex-start;
 }

@@ -19,10 +19,12 @@ const Matches = ({store}) => {
   findMatch();
 
   return (
-    <div>
+    <div className='feed'>
       <TopBar />
-      <li><Link to='/Matches/Friends'>Friends</Link></li>
-      <li><Link to='/Matches/Strangers'>Strangers</Link></li>
+      <div className='toggle-friends'>
+        <li className='friend-button active'><Link to='/Matches/Friends'>Friends</Link></li>
+        <li className='friend-button'><Link to='/Matches/Strangers'>Strangers</Link></li>
+      </div>
     </div>
   );
 };

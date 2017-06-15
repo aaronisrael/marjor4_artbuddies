@@ -6,26 +6,34 @@ const Friends = () => {
   return (
     <div>
       <MatchNav />
-      <ul>
-        <li>
-          <img src='../../../../assets/img/matches/1.png' alt='' />
-          <p>Xander Bruggeling</p>
-          <p>(5 matchende likes)</p>
+      <ul className='list center'>
+        <li className='match'>
+          <img className='match-img' src='../../../../assets/img/matches/1.png' alt='' />
+          <div className='name-container'>
+            <p className='match-name'>Xander Bruggeling</p>
+            <p className='match-count'>(5 matchende likes)</p>
+          </div>
         </li>
-        <li>
-          <img src='../../../../assets/img/matches/2.jpg' alt='' />
-          <p>Mieke Rommens</p>
-          <p>(4 matchende likes)</p>
+        <li className='match'>
+          <img className='match-img' src='../../../../assets/img/matches/2.jpg' alt='' />
+          <div className='name-container'>
+            <p className='match-name'>Mieke Rommens</p>
+            <p className='match-count'>(4 matchende likes)</p>
+          </div>
         </li>
-        <li>
-          <img src='../../../../assets/img/matches/3.jpg' alt='' />
-          <p>Bart Verschepen</p>
-          <p>(3 matchende likes)</p>
+        <li className='match'>
+          <img className='match-img' src='../../../../assets/img/matches/3.jpg' alt='' />
+          <div className='name-container'>
+            <p className='match-name'>Bart Verschepen</p>
+            <p className='match-count'>(3 matchende likes)</p>
+          </div>
         </li>
-        <li>
-          <img src='../../../../assets/img/matches/4.jpg' alt='' />
-          <p>Demian Broens</p>
-          <p>(3 matchende likes)</p>
+        <li className='match'>
+          <img className='match-img' src='../../../../assets/img/matches/4.jpg' alt='' />
+          <div className='name-container'>
+            <p className='match-name'>Demian Broens</p>
+            <p className='match-count'>(3 matchende likes)</p>
+          </div>
         </li>
       </ul>
     </div>

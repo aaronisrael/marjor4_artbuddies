@@ -38,7 +38,6 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
 
   const getOrder = () => {
     if (idkey % 2) {
-      console.log(`yo`);
       return `1`;
     } else {
       return `2`;
@@ -47,10 +46,20 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
 
   const getOrder2 = () => {
     if (idkey % 2) {
-      console.log(`yo`);
       return `2`;
     } else {
       return `1`;
+    }
+  };
+
+
+  const getRadius = () => {
+    if (idkey % 2) {
+      console.log(`right aligned`);
+      return `0 1.5rem 1.5rem 0`;
+    } else {
+      console.log(`left aligned`);
+      return `1.5rem 0 0 1.5rem`;
     }
   };
 
@@ -67,9 +76,13 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
     order: `${getOrder2()}`
   };
 
+  const cardStyle = {
+    borderRadius: `${getRadius()}`
+  };
+
   return (
     <div style={divStyle}>
-      <li className='card' >
+      <li className='card' style={cardStyle} >
 
         <div className='title-container'>
 
@@ -81,7 +94,7 @@ const ArtCard = ({name, photo, idkey, store, history}) => {
           </div>
 
         </div>
-        <img className='work-img' src={`../../../assets/img/art/${photo}/100.jpg`} onClick={handleDetail} alt='test' />
+        <img className='work-img' style={cardStyle} src={`../../../assets/img/art/${photo}/100.jpg`} onClick={handleDetail} alt='test' />
       </li>
     </div>
   );

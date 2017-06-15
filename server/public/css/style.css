@@ -131,6 +131,22 @@ nav {
           flex-direction: column;
 }
 
+.list-center {
+  width: 100vw;
+  margin-top: 64px;
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -142,7 +158,6 @@ nav {
   margin: 32px 0 240px;
   margin: 2rem 0 15rem;
   box-shadow: 0 .5rem 1rem lightgray;
-  border-radius: 1.5rem 0 0 1.5rem;
 }
 
 .title-container {
@@ -152,7 +167,12 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid red;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 160px;
+  margin-top: 10rem;
+  width: 90vw;
 }
 
 .work-name {
@@ -163,7 +183,10 @@ nav {
   font-weight: 600;
   font-size: 48px;
   font-size: 3rem;
-  width: 50vw;
+  margin-top: 128px;
+  margin-top: 8rem;
+  padding-right: 32px;
+  padding-right: 2rem;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2
@@ -177,8 +200,10 @@ nav {
   height: 10rem;
   background-color: #e83739;
   position: absolute;
-  top: -112px;
-  top: -7rem;
+  margin-left: 16px;
+  margin-left: 1rem;
+  margin-top: -112px;
+  margin-top: -7rem;
 }
 
 .buttons {
@@ -198,7 +223,6 @@ nav {
   width: 90vw;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1.5rem 0 0 1.5rem;
 }
 
 .button {
@@ -278,6 +302,141 @@ nav {
   height: 6.2rem;
   margin: 32px;
   margin: 2rem;
+}
+
+.toggle-friends {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-top: 48px;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  border-radius: 5rem;
+  box-shadow: 0 .5rem 1rem #cacaca
+}
+
+.toggle-friends li a{
+  text-decoration: none;
+}
+
+.active {
+  background-color: #e83739
+}
+
+.active a{
+  color: white;
+}
+
+.friend-button {
+  width: 640px;
+  width: 40rem;
+  padding: 24px 16px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 5rem;
+}
+
+.match {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 32px 0;
+  margin: 2rem 0;
+}
+
+.match-img {
+  width: 248px;
+  width: 15.5rem;
+  height: 248px;
+  height: 15.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10rem;
+}
+
+.name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 80px;
+  margin-left: 5rem;
+}
+
+.match-name {
+  font-family: denmark;
+  font-weight: bold;
+  font-size: 36.8px;
+  font-size: 2.3rem;
+  margin: 16px 0;
+  margin: 1rem 0
+}
+
+.match-name::before{
+  content: '';
+  width: 128px;
+  width: 8rem;
+  height: 9.6px;
+  height: .6rem;
+  background-color: #e83739;
+  position: absolute;
+  margin-top: 11.2px;
+  margin-top: .7rem;
+  margin-left: -144px;
+  margin-left: -9rem;
+}
+
+.match-count {
+  color: #c1c1c1;
+}
+
+.profile {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-name {
+  font-family: denmark;
+  font-size: 44.8px;
+  font-size: 2.8rem;
+  color: #e83739;
+  font-weight: bold;
+  margin: 32px 0;
+  margin: 2rem 0;
+  letter-spacing: 3.2px;
+  letter-spacing: .2rem;
+}
+
+.user-about {
+  font-family: denmark;
+  font-size: 36.8px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map*/

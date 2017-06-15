@@ -7,11 +7,13 @@ const Profile = () => {
   return (
     <div>
       <TopBar />
-      <img src='../../assets/img/matches/1.png' alt='' />
-      <h1>Xander Bruggeling</h1>
-      <h2>Over mij</h2>
-      <textarea name='' id='' cols='30' rows='10'></textarea>
-      <button>Profiel opslaan</button>
+      <div className='profile'>
+        <img className='match-img' src='../../assets/img/matches/1.png' alt='' />
+        <h1 className='user-name'>Xander Bruggeling</h1>
+        <h2 className='user-about'>Over mij</h2>
+        <textarea name='' id='' cols='30' rows='10'></textarea>
+        <button>Profiel opslaan</button>
+      </div>
     </div>
   );
 };

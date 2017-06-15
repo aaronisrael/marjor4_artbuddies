@@ -27,7 +27,7 @@ const TopBar = ({store, history}) => {
     <nav>
       <ul className='navigatie'>
         <li><Link to='/ListView'>Feed</Link></li>
-        <li onClick={handleMatches}>Matcher</li>
+        <li onClick={handleMatches}>Matches</li>
         <li onClick={handleProfile}>Profile</li>
       </ul>
     </nav>

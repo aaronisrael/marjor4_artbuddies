@@ -8,17 +8,17 @@ import {NavLink} from 'react-router-dom';
 
 import {observer, inject, PropTypes} from 'mobx-react';
 
-import {Rellax} from 'rellax';
-
 const Matches = ({store}) => {
-
-  console.log(Rellax);
 
   const {
     findMatch
   } = store;
 
-  findMatch();
+  const init = () => {
+    findMatch();
+  };
+
+  init();
 
   return (
     <div className='feed'>

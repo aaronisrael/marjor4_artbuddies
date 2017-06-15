@@ -9,10 +9,10 @@ import TopBar from './TopBar';
 const Profile = ({store}) => {
 
   const {
-    findMatch, myName, myPhoto
+    myUser, myName, myPhoto
   } = store;
 
-  findMatch();
+  myUser();
 
   return (
     <div className='feed'>

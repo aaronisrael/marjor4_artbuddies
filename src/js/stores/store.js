@@ -24,8 +24,14 @@ class Store {
   @observable
   myName = ``
 
-@observable
+  @observable
   myPhoto = ``
+
+  @observable
+  user = ``
+
+  @observable
+  matches = []
 
   init = () => {
     artbuddiesAPI.read()
@@ -115,12 +121,26 @@ class Store {
   }
 
   searchId = (nameKey, myArray) => {
-    console.log(nameKey, myArray);
     for (let i = 0;i < myArray.length;i ++) {
       if (myArray[i]._id === nameKey) {
         return myArray[i];
       }
     }
+  }
+
+  myUser = () => {
+    artbuddiesAPI.exist(this.userId).then(this._myUser);
+  }
+
+  @action
+  _myUser = () => {
+    artbuddiesAPI.read().then(data => {
+      artbuddiesAPI.exist(this.userId).then(this.getID);
+      const myObject = this.searchId(this._id, data.artbuddies);
+      this.myName = myObject.name;
+      this.myPhoto = myObject.photo;
+      this.user = myObject;
+    });
   }
 
   findMatch = () => {
@@ -134,6 +154,31 @@ class Store {
       const myObject = this.searchId(this._id, data.artbuddies);
       this.myName = myObject.name;
       this.myPhoto = myObject.photo;
+      this.user = myObject;
+      data.artbuddies.map(d => {
+        let matchCount = 0;
+        myObject.rating;
+        for (let i = 0;i <= 9;i ++) {
+          if (myObject.rating[`art${i}`] !== 0) {
+            if (myObject.rating[`art${i}`] === d.rating[`art${i}`]) {
+              matchCount ++;
+            }
+          }
+        }
+        if (matchCount >= 3) {
+          if (d._id !== myObject._id) {
+            if (this.matches.toJSON().length === 0) {
+              this.matches.push(d);
+            } else {
+              this.matches.map(m => {
+                if (m._id !== d._id) {
+                  this.matches.push(d);
+                }
+              });
+            }
+          }
+        }
+      });
     });
   }
 }

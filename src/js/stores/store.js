@@ -121,7 +121,6 @@ class Store {
   }
 
   searchId = (nameKey, myArray) => {
-    console.log(nameKey, myArray);
     for (let i = 0;i < myArray.length;i ++) {
       if (myArray[i]._id === nameKey) {
         return myArray[i];
@@ -168,7 +167,15 @@ class Store {
         }
         if (matchCount >= 3) {
           if (d._id !== myObject._id) {
-            this.matches.push(d);
+            if (this.matches.toJSON().length === 0) {
+              this.matches.push(d);
+            } else {
+              this.matches.map(m => {
+                if (m._id !== d._id) {
+                  this.matches.push(d);
+                }
+              });
+            }
           }
         }
       });

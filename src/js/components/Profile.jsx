@@ -1,15 +1,25 @@
 import React from 'react';
 
+import {observer, inject, PropTypes} from 'mobx-react';
+
+
 import TopBar from './TopBar';
 
 
-const Profile = () => {
+const Profile = ({store}) => {
+
+  const {
+    findMatch, myName, myPhoto
+  } = store;
+
+  findMatch();
+
   return (
     <div className='feed'>
       <TopBar />
       <div className='profile'>
-        <img className='match-img' src='../../assets/img/matches/1.png' alt='' />
-        <h1 className='user-name'>Xander Bruggeling</h1>
+        <img className='match-img' src={myPhoto} alt='' />
+        <h1 className='user-name'>{myName}</h1>
         <h2 className='user-about'>Over mij</h2>
         <textarea className='textarea' placeholder='Vertel wat over jezelf in 300 karakters.' name='' id='' cols='30' rows='10'></textarea>
         <button className='submit'>Profiel opslaan</button>
@@ -17,4 +27,11 @@ const Profile = () => {
     </div>
   );
 };
-export default Profile;
+
+Profile.propTypes = {
+  store: PropTypes.observableObject.isRequired,
+};
+
+export default inject(`store`)(
+  observer(Profile)
+);

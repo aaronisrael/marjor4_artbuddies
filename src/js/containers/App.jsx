@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import DevTools from 'mobx-react-devtools';
 
 import {observer} from 'mobx-react';
 
@@ -25,8 +24,6 @@ class App extends Component {
   render(history) {
     return (
       <section>
-
-        {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
         <Router history={history}>
           <Switch>

@@ -1,5 +1,4 @@
 import React from 'react';
-import DevTools from 'mobx-react-devtools';
 
 import {observer, inject, PropTypes} from 'mobx-react';
 
@@ -23,8 +22,6 @@ const FacebookConnect = ({store, history}) => {
 
   return (
     <section className='onboarding'>
-
-      {process.env.NODE_ENV !== `production` ? <DevTools /> : null}
 
       <section className='onboard-wrap'>
         <div className='logogroot'></div>
